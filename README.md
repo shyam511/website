@@ -36,13 +36,18 @@ character. Generator: `/tmp/opencode/hero.py` (endpoint
 `https://ai-gateway.vercel.sh/v1/chat/completions`, key read from
 `~/.local/share/opencode/auth.json` under `.vercel.key` — never commit the key).
 
+The shipped file is then edge-replicated by ~8% and given a smoothstep alpha feather,
+so its outer band is transparent and it dissolves into the page field instead of
+sitting in a visible rectangle. The page field (`--bg-top:#202049` → `--bg:#0e0e1a`)
+is sampled from the image's own top and bottom edges.
+
 ## Design
 
 The site mirrors the app's Linear-anchored language
-(`../terminalV2/android/.../ui/theme/Color.kt` and `Tokens.kt`): near-black surfaces
-(`#0b0c0e`), `#23252b` hairlines, the indigo action accent `#5e6ad2`, system sans for
-prose and a mono face for metadata. Light mode is supplied via `prefers-color-scheme`,
-using the same light tokens as the app. The logo is the chosen **Dock** mark.
+(`../terminalV2/android/.../ui/theme/Color.kt` and `Tokens.kt`): a dark indigo field
+sampled from the hero image, hairline borders, an indigo action accent, system sans for
+prose and a mono face for metadata. It is dark-only (`color-scheme: dark`) so the field
+always merges with the hero; the text is light. The logo is the chosen **Dock** mark.
 
 ## Publish with GitHub Pages
 
