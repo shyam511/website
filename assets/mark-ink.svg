@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-label="Bitlane">
+  <rect width="512" height="512" rx="112" fill="#0b0c0e"/>
+  <path d="M91 137 L186 191.5 L91 246" fill="none" stroke="#5e6ad2" stroke-width="36" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="384" cy="181" r="43" fill="#5e6ad2"/>
+  <rect x="143" y="344" width="220" height="36" rx="18" fill="#5e6ad2"/>
+</svg>
