@@ -52,7 +52,7 @@
     <p>To create images, the app processes the following. This information leaves your device only to reach our AI provider for generation, as described below.</p>
     <ul>
       <li><strong>Prompts</strong> — the words you say or type to describe an image or a change to one.</li>
-      <li><strong>Voice audio</strong> — while a session is active, your microphone is used to turn your speech into words. The audio is used for the current request and is <strong>not stored by us</strong>.</li>
+      <li><strong>Voice audio</strong> — while a session is active, your microphone is used to hold a live conversation with the model. The audio is streamed to our AI provider through the gateway, used for the current request and <strong>not stored by us</strong>.</li>
       <li><strong>Images</strong> — photos you choose to import, and the images the model generates from your prompts.</li>
       <li><strong>Subscription status</strong> — handled by Google Play. We do not receive or store your payment details.</li>
     </ul>
@@ -68,8 +68,8 @@
     <h2>3. Sharing and third parties</h2>
     <p>We do not sell or rent your information. There are no advertising, analytics or data-broker SDKs in the app. A few third parties are involved:</p>
     <ul>
-      <li><strong>Vercel — AI Gateway.</strong> Your prompts, images and audio pass through the Vercel AI Gateway, which routes each request to the model that generates the image or transcribes your speech. Vercel&rsquo;s handling is described in Vercel&rsquo;s Privacy Policy at <a href="https://vercel.com/legal/privacy-policy">vercel.com/legal/privacy-policy</a>.</li>
-      <li><strong>Google — Gemini model.</strong> The image model in use is Google&rsquo;s Gemini image model. When the gateway routes a request to it, Google processes your prompts and images as the model provider, under Google&rsquo;s Privacy Policy at <a href="https://policies.google.com/privacy">policies.google.com/privacy</a>.</li>
+      <li><strong>Vercel — AI Gateway.</strong> Your prompts, images and audio pass through the Vercel AI Gateway, which routes each request to the model that generates the image or runs the live voice conversation. Vercel&rsquo;s handling is described in Vercel&rsquo;s Privacy Policy at <a href="https://vercel.com/legal/privacy-policy">vercel.com/legal/privacy-policy</a>.</li>
+      <li><strong>Google — Gemini model.</strong> The image model and the live voice model in use are Google&rsquo;s Gemini models. When the gateway routes a request to one of them, Google processes your prompts, images and audio as the model provider, under Google&rsquo;s Privacy Policy at <a href="https://policies.google.com/privacy">policies.google.com/privacy</a>.</li>
       <li><strong>Google Play.</strong> If you buy a subscription, Google Play handles the transaction under Google&rsquo;s own terms and privacy policy. We do not receive your payment details.</li>
     </ul>
 
@@ -83,7 +83,7 @@
 
     <h2>5. Microphone, photos and permissions</h2>
     <ul>
-      <li><strong>Microphone (<code>RECORD_AUDIO</code>).</strong> Used only while an editing session is active. A clear indicator is shown whenever the app is listening, and the microphone sleeps when the canvas is idle or the app is in the background. Audio is not retained after the request.</li>
+      <li><strong>Microphone (<code>RECORD_AUDIO</code>).</strong> Used only while an editing session is active. A clear indicator is shown whenever the app is listening, and the microphone sleeps when the canvas is idle or the app is in the background. The app does not store your audio after the request.</li>
       <li><strong>Photos.</strong> You choose images through the Android photo picker; the app accesses only the images you pick.</li>
       <li><strong>Internet.</strong> Used to reach the AI gateway.</li>
     </ul>
@@ -95,7 +95,7 @@
     <p>We retain nothing on our side — we have no servers storing your information. Data the app stores remains on your device until you delete it or uninstall the app. How long our AI providers — Vercel and the underlying model provider — retain prompts, images and audio processed through their services is governed by their terms and settings.</p>
 
     <h2>8. Data security</h2>
-    <p>Information sent to the AI gateway is transmitted over HTTPS. Information the app stores stays in the app&rsquo;s private storage on your device. As with any software, no method of transmission or storage is perfectly secure.</p>
+    <p>Information sent to the AI gateway is transmitted over HTTPS (voice uses an encrypted WebSocket). Information the app stores stays in the app&rsquo;s private storage on your device. As with any software, no method of transmission or storage is perfectly secure.</p>
 
     <h2>9. Children&rsquo;s privacy</h2>
     <p>Kala is not directed to children, and we do not knowingly collect information from children.</p>
